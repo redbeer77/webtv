@@ -1,0 +1,7 @@
+<div class="menu-channels">
+<ul>
+    <li *ngFor="let channel of channels" (click)="toSew(channel)" >
+    <img [src]="channel.logo"  width="60px" [title]="channel.name" (click)="toSew(channel)">
+    </li>
+</ul>
+</div>
