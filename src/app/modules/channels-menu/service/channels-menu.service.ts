@@ -19,8 +19,25 @@ export class ChannelsMenuService {
     let ambitos = spainChannels.ambits
     let generalistas = ambitos[0].channels;
     this.channelsToMenu = generalistas;
+    let array:any[];
 
+    
+//     let pruebas =  this.channelsToMenu
+//       .map(
+//         a=>{
 
+//           array.push()
+
+//          a.options.map(
+//             b=> {
+              
+//               return {enlace:b.url};
+//             }
+//           )
+//         }
+        
+//       )
+// debugger;
     // let prueba = this.channelsToMenu
     //                  .filter( 
     //                           a=>{
