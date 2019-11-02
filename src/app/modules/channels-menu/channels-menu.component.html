@@ -1,7 +1,11 @@
 <div class="menu-channels">
-<ul>
-    <li *ngFor="let channel of channels" (click)="toSew(channel)" >
-    <img [src]="channel.logo"  width="60px" [title]="channel.name" (click)="toSew(channel)">
-    </li>
-</ul>
+    <ul>
+        <li *ngFor="let channel of channels" (click)="toSew(channel)" >
+            <img [src]="channel.logo"  width="60px" [title]="channel.name" (click)="toSew(channel)">
+        
+            <ng-container *ngIf="isSelected(channel)">
+                <app-video-hls  [url]="channel.options[0].url"></app-video-hls> 
+             </ng-container>
+        </li>
+    </ul>
 </div>

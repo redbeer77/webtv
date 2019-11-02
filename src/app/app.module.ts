@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChannelsMenuModule } from './modules/channels-menu/channels-menu.module';
-import { VideoHlsModule } from './modules/video-hls/video-hls.module';
+
 
 @NgModule({
   declarations: [
@@ -13,8 +13,7 @@ import { VideoHlsModule } from './modules/video-hls/video-hls.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChannelsMenuModule,
-    VideoHlsModule
+    ChannelsMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

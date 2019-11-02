@@ -31,7 +31,7 @@ export class VideoHlsDirective implements OnInit{
     });
 
     if (HLS.isSupported()) {
-      
+      debugger;
       
       this.hls.loadSource(this.scr);
       this.hls.attachMedia(this.element);

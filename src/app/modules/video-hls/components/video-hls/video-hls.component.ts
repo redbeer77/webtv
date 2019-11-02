@@ -13,8 +13,10 @@ export class VideoHlsComponent  {
   constructor() { }
   
   ngOnChanges(changes: SimpleChanges) {
-    debugger;
-    console.log(changes.categoryId.currentValue)
+    // debugger;
+    
+    // console.log(changes.url.currentValue)
+    this.url =  changes.url.currentValue||null;
     // this.doSomething();
     // You can also use categoryId.previousValue and 
     // categoryId.firstChange for comparing old and new values

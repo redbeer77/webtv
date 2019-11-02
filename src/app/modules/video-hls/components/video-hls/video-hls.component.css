@@ -1,3 +1,6 @@
 video{
-   width: 60%; 
+   position: fixed;
+   width: 92%;
+   top: 0;
+   right: 0;
 }
