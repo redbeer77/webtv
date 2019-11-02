@@ -14,11 +14,73 @@ export class ChannelsMenuService {
     return this.http.get(this.urlChannels);
   }
 
-  public processChannelInfo(data:any):any[]{
+  public async processChannelInfo(data:any):Promise<channels[]>{
     let spainChannels =  data.countries[0]
     let ambitos = spainChannels.ambits
     let generalistas = ambitos[0].channels;
     this.channelsToMenu = generalistas;
-    return this.channelsToMenu
+
+
+    // let prueba = this.channelsToMenu
+    //                  .filter( 
+    //                           a=>{
+    //                             return a.options.filter(
+    //                                b=>{
+    //                                   this.tryConexion( b.url).then(
+    //                                     a=> { 
+
+    //                                       return a.subscribe(
+    //                                         b=> {
+    //                                           console.log(b)
+    //                                           debugger;
+    //                                         },
+    //                                         err=>{
+    //                                           debugger;
+    //                                           return err.status === 200
+    //                                         }
+    //                                       )
+                                          
+    //                                       },
+                                          
+                                        
+    //                                   )
+         
+    //                                       }
+    //                               ) 
+    //                             }  
+    //                           )
+      
+
+    return   this.channelsToMenu
+    // .filter( 
+    //          a=>{
+    //            return a.options.filter(
+    //               b=>{
+    //                  return this.tryConexion( b.url).then(
+    //                    a=> { 
+
+    //                      return a.subscribe(
+    //                        b=> {
+    //                          console.log(b)
+    //                          debugger;
+    //                        },
+    //                        err=>{
+    //                          debugger;
+    //                          return err.status === 200
+    //                        }
+    //                      )
+                         
+    //                      },
+                         
+                       
+    //                  )
+
+    //                      }
+    //              ) 
+    //            }  
+    //          )
+  }
+  public async tryConexion(url:string){
+    return await this.http.get(url)
   }
 }

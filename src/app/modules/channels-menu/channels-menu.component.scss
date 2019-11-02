@@ -1,5 +1,11 @@
 .menu-channels{
-    width: 105px;
-    float: left;
-    background-color: black;
+    // width: 105px;
+    // float: left;
+    // background-color: black;
+    // z-index: 1;
+}
+.navegador{
+    height: 95px;
+    width: calc(100%);
+    overflow-x: auto;
 }

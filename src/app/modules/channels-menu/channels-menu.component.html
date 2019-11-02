@@ -1,11 +1,26 @@
-<div class="menu-channels">
-    <ul>
-        <li *ngFor="let channel of channels" (click)="toSew(channel)" >
-            <img [src]="channel.logo"  width="60px" [title]="channel.name" (click)="toSew(channel)">
+<!-- <div class="menu-channels">
+        <div class="list-group">
+                <a  *ngFor="let channel of channels" (click)="toSew(channel)"   (click)="toSew(channel)" href="#" class="list-group-item list-group-item-action">
+                        <img [src]="channel.logo"  width="60px" [title]="channel.name" (click)="toSew(channel)">
         
-            <ng-container *ngIf="isSelected(channel)">
+                        <ng-container *ngIf="isSelected(channel)">
+                            <app-video-hls  [url]="channel.options[0].url"></app-video-hls> 
+                         </ng-container>
+                </a>
+ 
+              </div>
+
+</div> -->
+<div class="navegador">
+<nav aria-label="Page navigation example">
+        <ul class="pagination" style="margin-bottom: 0rem;">
+          <li  *ngFor="let channel of channels | async" (click)="toSew(channel)"  class="page-item"><a class="page-link" href="#"> <img [src]="channel.logo"  width="60px" [title]="channel.name" (click)="toSew(channel)">
+        
+            <!-- <ng-container *ngIf="isSelected(channel)">
                 <app-video-hls  [url]="channel.options[0].url"></app-video-hls> 
-             </ng-container>
-        </li>
-    </ul>
-</div>
+             </ng-container> -->
+            </a></li>
+        </ul>
+      </nav>
+    </div>
+    <app-video-hls  [url]="channelSelected"></app-video-hls> 

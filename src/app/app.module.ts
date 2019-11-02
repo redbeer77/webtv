@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChannelsMenuModule } from './modules/channels-menu/channels-menu.module';
+import { InitModule } from './modules/init/init.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ChannelsMenuModule } from './modules/channels-menu/channels-menu.module
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChannelsMenuModule
+    ChannelsMenuModule,
+    InitModule
   ],
   providers: [],
   bootstrap: [AppComponent]
